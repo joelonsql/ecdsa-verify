@@ -1,0 +1,5 @@
+name: ecdsaverify
+environment:
+  sdk: '>=2.18.6 <3.0.0'
+dependencies:
+  test: '>=1.22.1'
