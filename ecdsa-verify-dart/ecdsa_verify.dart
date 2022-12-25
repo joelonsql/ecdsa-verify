@@ -12,12 +12,12 @@ BigInt? modularInverse(BigInt a, BigInt n) {
     BigInt newr = a;
     while (newr != BigInt.zero) {
         BigInt quotient = r ~/ newr;
-        var tmp1 = t;
+        var tmp = t;
         t = newt;
-        newt = tmp1 - quotient * newt;
-        var tmp2 = r;
+        newt = tmp - quotient * newt;
+        tmp = r;
         r = newr;
-        newr = tmp2 - quotient * newr;
+        newr = tmp - quotient * newr;
     }
     if (r > BigInt.one) {
         return null;
