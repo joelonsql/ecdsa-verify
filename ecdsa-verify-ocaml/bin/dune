@@ -1,0 +1,4 @@
+(executable
+ (public_name ecdsa_verify)
+ (name main)
+ (libraries ecdsa_verify num batteries))

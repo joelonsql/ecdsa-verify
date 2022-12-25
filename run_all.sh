@@ -8,6 +8,13 @@ function print() {
 a="69c6e9f8d9bcbdba4e5478cb75b084332d51b0be2c21701b157c7c87abb98057"
 n="fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141"
 
+print "OCaml"
+cd ecdsa-verify-ocaml
+dune test
+dune build
+./_build/install/default/bin/ecdsa_verify "0x$a" "0x$n"
+cd ..
+
 print "Haskell"
 cd ecdsa-verify-haskell
 ghc ecdsa_verify.hs
@@ -16,26 +23,26 @@ cd ..
 
 print "Javascript"
 cd ecdsa-verify-javascript
-node main.js $a $n
 node test.js
+node main.js $a $n
 cd ..
 
 print "Julia"
 cd ecdsa-verify-julia
-julia main.jl $a $n
 julia test.jl
+julia main.jl $a $n
 cd ..
 
 print "Python3"
 cd ecdsa-verify-python3
-python3 main.py $a $n
 python3 test.py
+python3 main.py $a $n
 cd ..
 
 print "Ruby"
 cd ecdsa-verify-ruby
-ruby main.rb $a $n
 ruby test.rb
+ruby main.rb $a $n
 cd ..
 
 print "Rust"
