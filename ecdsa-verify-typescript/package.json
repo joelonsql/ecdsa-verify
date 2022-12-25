@@ -1,0 +1,10 @@
+{
+  "devDependencies": {
+    "@types/node": "^18.11.17"
+  },
+  "name": "ecdsa-verify",
+  "version": "1.0.0",
+  "main": "main.js",
+  "license": "MIT",
+  "type": "module"
+}
