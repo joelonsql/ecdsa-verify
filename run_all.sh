@@ -8,6 +8,13 @@ function print() {
 a="69c6e9f8d9bcbdba4e5478cb75b084332d51b0be2c21701b157c7c87abb98057"
 n="fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141"
 
+print "Crystal"
+cd ecdsa-verify-crystal
+crystal spec
+crystal build src/main.cr --release
+./main $a $n
+cd ..
+
 print "OCaml"
 cd ecdsa-verify-ocaml
 dune test
