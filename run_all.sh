@@ -8,6 +8,11 @@ function print() {
 a="69c6e9f8d9bcbdba4e5478cb75b084332d51b0be2c21701b157c7c87abb98057"
 n="fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141"
 
+print "PL/pgSQL"
+cd ecdsa-verify-plpgsql
+psql -q -t -A -q -f main.sql -v a="'\x"$a"'" -v n="'\x"$n"'"
+cd ..
+
 print "Kotlin"
 cd ecdsa-verify-kotlin
 kotlinc main.kt -include-runtime -d main.jar
