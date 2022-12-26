@@ -10,7 +10,8 @@ n="fffffffffffffffffffffffffffffffebaaedce6af48a03bbfd25e8cd0364141"
 
 print "Kotlin"
 cd ecdsa-verify-kotlin
-gradle run --args="$a $n"
+kotlinc main.kt -include-runtime -d main.jar
+java -ea -jar main.jar $a $n
 cd ..
 
 print "TypeScript"

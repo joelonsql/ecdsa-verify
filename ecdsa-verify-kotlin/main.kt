@@ -38,7 +38,7 @@ fun main(args: Array<String>) {
     test()
 
     if (args.size != 2) {
-        print("Expected two hexadecimal strings as arguments")
+        println("Expected two hexadecimal strings as arguments")
         return
     }
 
@@ -47,9 +47,9 @@ fun main(args: Array<String>) {
 
     val result = modularInverse(a, n);
     if (result != null) {
-        print(result.toString(16))
+        println(result.toString(16))
     } else {
-        print("No inverse exists for the given values")
+        println("No inverse exists for the given values")
     }
 
 }
